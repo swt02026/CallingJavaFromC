@@ -14,10 +14,10 @@ int main(int argc, char **argv)
 	vm_args.version  = JNI_VERSION_1_8;
 	vm_args.nOptions = 1;
 	JavaVMOption options[1];
-  options[0].optionString    = "-Djava.class.path=/home/ubuntu/environment";
-  vm_args.options            = options;
-  vm_args.nOptions           = 1;
-  vm_args.ignoreUnrecognized = JNI_TRUE;
+  	options[0].optionString    = "-Djava.class.path=/home/ubuntu/environment";
+  	vm_args.options            = options;
+  	vm_args.nOptions           = 1;
+  	vm_args.ignoreUnrecognized = JNI_TRUE;
 
 	res = JNI_CreateJavaVM(&vm, (void **)&env, &vm_args);
 	if (res != JNI_OK) {
